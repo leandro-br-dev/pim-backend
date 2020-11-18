@@ -1,0 +1,17 @@
+{
+  "development": {
+    "username": "admin_pim_2020",
+    "password": "unip_123",
+    "database": "db_pim_2020",
+    "host": "mysql741.umbler.com",
+    "port": 41890,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "admin_pim_2020",
+    "password": "unip_123",
+    "database": "db_pim_2020",
+    "host": "mysql741.umbler.com",    
+    "dialect": "mysql"
+  }
+}
