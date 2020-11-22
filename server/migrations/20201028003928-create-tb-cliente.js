@@ -54,6 +54,16 @@ module.exports = {
         type: Sequelize.STRING(10),
         allowNull: false,
       },
+      perfil: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: true
+      },
+      chave_acesso: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: true
+      },
       ativo: {
         type: Sequelize.BOOLEAN,
         allowNull: false,

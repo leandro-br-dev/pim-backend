@@ -31,21 +31,30 @@ class ClienteController{
     static async login(req, res){
 
         const { cpf_cnpj } = req.params;
-        const { password } = req.body;       
-
+        const { password } = req.body;    
+        const updateCliente = req.body;
         try {
-            const oneCliente = await database.TB_CLIENTE.findOne( { 
+            await database.TB_CLIENTE.update(updateCliente, { 
                 where: 
-                {
+                { 
                     cpf_cnpj: cpf_cnpj,
                     password: password,
                     ativo: 1
-                },
+                } 
+            } );   
+
+            const updatedCliente = await database.TB_CLIENTE.findOne( { 
+                where: 
+                { 
+                    cpf_cnpj: cpf_cnpj,
+                } 
             } ); 
-            return res.status(200).json(oneCliente);
+            return res.status(200).json(updatedCliente);
         } catch {
             return res.status(500).json();
         }
+
+        
     }
 
     static async create(req, res){

@@ -33,10 +33,10 @@ class UsuarioController{
 
         const newUsuario = req.body;
         try {
-            const createdUsuario = await database.tb_usuario.create( newUsuario); 
+            const createdUsuario = await database.tb_usuario.create(newUsuario); 
             return res.status(200).json(createdUsuario);
         } catch {
-            return res.status(500).json();
+            return res.status(500).json(error.message);
         }
     }
 

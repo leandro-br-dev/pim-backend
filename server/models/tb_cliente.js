@@ -60,6 +60,17 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(10),
       allowNull: false,
     },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    perfil: {
+      type: DataTypes.STRING,
+    },
+    chave_acesso: {
+      type: DataTypes.STRING,
+    },
     ativo: DataTypes.BOOLEAN,
   }, {
     sequelize,
