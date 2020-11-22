@@ -2,13 +2,10 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('tb_contratos', {
-      id: {
+      id_contrato: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      id_contrato: {
         type: Sequelize.INTEGER
       },
       num_conta: {

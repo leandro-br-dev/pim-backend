@@ -4,8 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/moedas', MoedaController.findAll);
-    routes.post('/moedas', MoedaController.create);    
-    routes.put('/moedas/:id', MoedaController.update);
-    routes.delete('/moedas/:id', MoedaController.delete);
-
+    routes.get('/moedas/:id', MoedaController.findOne);
+    
 module.exports = routes;

@@ -1,18 +1,18 @@
 {
   "development": {
-    "username": "admin_pim_2020",
+    "username": "admin_sql_pim",
     "password": "unip_123",
-    "database": "db_pim_2020",
-    "host": "mysql741.umbler.com",
-    "port": 41890,
-    "dialect": "mysql"
+    "database": "db_sqlserver",
+    "host": "sqlserver-pim-2020.cayxzrbvzs1v.sa-east-1.rds.amazonaws.com",
+    "port": 1433,
+    "dialect": "mssql"
   },
   "production": {
-    "username": "admin_pim_2020",
+    "username": "admin_sql_pim",
     "password": "unip_123",
-    "database": "db_pim_2020",
-    "port": 41890,
-    "host": "mysql741.umbler.com",    
-    "dialect": "mysql"
+    "database": "db_sqlserver",
+    "port": 1433,
+    "host": "sqlserver-pim-2020.cayxzrbvzs1v.sa-east-1.rds.amazonaws.com",    
+    "dialect": "mssql"
   }
 }

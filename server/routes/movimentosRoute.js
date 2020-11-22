@@ -4,8 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/movimentos', MovimentoController.findAll);
-    routes.post('/movimentos', MovimentoController.create);    
-    routes.put('/movimentos/:id', MovimentoController.update);
-    routes.delete('/movimentos/:id', MovimentoController.delete);
+    routes.get('movimentos/:id', MovimentoController.findOne);
 
 module.exports = routes;

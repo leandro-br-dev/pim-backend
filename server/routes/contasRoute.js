@@ -4,8 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/contas', ContaController.findAll);
-    routes.post('/contas', ContaController.create);    
-    routes.put('/contas/:id', ContaController.update);
-    routes.delete('/contas/:id', ContaController.delete);
-
+    routes.get('/contas/:id', ContaController.findOne);
+   
 module.exports = routes;

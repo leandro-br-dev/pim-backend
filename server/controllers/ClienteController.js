@@ -12,13 +12,26 @@ class ClienteController{
         }
         
     }
+    static async findOne (req,res){
+        const { id } = req.params;         
+
+        try {
+            const oneConta = await database.tb_conta.findOne( { 
+                where: 
+                { 
+                    id: Number(id) 
+                } 
+            } ); 
+            return res.status(200).json(oneConta);
+        } catch {
+            return res.status(500).json(error.message);
+        }
+    }
 
     static async login(req, res){
 
         const { cpf_cnpj } = req.params;
-        const { password } = req.body;
-
-        console.log(cpf_cnpj, password);
+        const { password } = req.body;       
 
         try {
             const oneCliente = await database.TB_CLIENTE.findOne( { 

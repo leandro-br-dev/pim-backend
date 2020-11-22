@@ -1,25 +1,25 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('tb_movimentos', {
+    await queryInterface.createTable('tb_usuario', {
 
-      id_movimento: {
+      cpf_cnpj: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      num_conta: {
-        type: Sequelize.INTEGER
-      },
-      tipo_movim: {
         type: Sequelize.STRING
       },
-      vl_lanc_movim: {
-        type: Sequelize.DOUBLE
+      senha: {
+        type: Sequelize.STRING,
+        allowNull:true
       },
-      dt_movim: {
-        type: Sequelize.DATE
+      perfil: {
+        type: Sequelize.STRING
+      },
+      ativo: {
+        type: Sequelize.BOOLEAN
+      },
+      chave_acesso: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -32,6 +32,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('tb_movimentos');
+    await queryInterface.dropTable('tb_usuario');
   }
 };

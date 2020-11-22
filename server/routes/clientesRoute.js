@@ -4,6 +4,7 @@ const { Router }        = require('express'),
 
 
     routes.get('/clientes', ClienteController.findAll);
+    routes.get('clientes/:id', ClienteController.findOne);
     routes.post('/clientes', ClienteController.create);    
     routes.post('/clientes/login/:cpf_cnpj', ClienteController.login);
     routes.put('/clientes/:id', ClienteController.update);

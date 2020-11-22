@@ -5,6 +5,7 @@ const ContratoController = require('../controllers/ContratoController');
 const MoedaController = require('../controllers/MoedaController');
 const TarifaController = require('../controllers/TarifaController');
 const MovimentoController = require('../controllers/MovimentoController');
+const UsuarioController = require('../controllers/UsuarioController');
 
 const { Router } = require('express'),
         routes   = Router(),
@@ -14,7 +15,8 @@ const { Router } = require('express'),
         contratos = require('./contratosRoute'),
         moedas = require('./moedasRoute'),
         tarifas = require('./tarifasRoute'),
-        movimentos = require("./movimentosRoute")
+        movimentos = require("./movimentosRoute"),
+        usuarios = require("./usuariosRoute")
 
     routes.use(clientes); 
     routes.use(contas);
@@ -23,5 +25,6 @@ const { Router } = require('express'),
     routes.use(moedas);
     routes.use(tarifas);
     routes.use(movimentos);
+    routes.use(usuarios);
 
 module.exports = routes;

@@ -4,8 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/investimentos', InvestimentoController.findAll);
-    routes.post('/investimentos', InvestimentoController.create);    
-    routes.put('/investimentos/:id', InvestimentoController.update);
-    routes.delete('/investimentos/:id', InvestimentoController.delete);
+    routes.get('investimentos/:id', InvestimentoController.findOne);
 
 module.exports = routes;

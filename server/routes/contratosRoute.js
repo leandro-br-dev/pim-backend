@@ -4,8 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/contratos', ContratoController.findAll);
-    routes.post('/contratos', ContratoController.create);    
-    routes.put('/contratos/:id', ContratoController.update);
-    routes.delete('/contratos/:id', ContratoController.delete);
-
+    routes.get('/contratos/:id', ContratoController.findOne);
+    
 module.exports = routes;
