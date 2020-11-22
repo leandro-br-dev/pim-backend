@@ -29,6 +29,17 @@ class UsuarioController{
         }
     }
 
+    static async create(req, res){
+
+        const newUsuario = req.body;
+        try {
+            const createdUsuario = await database.tb_usuario.create( newUsuario); 
+            return res.status(200).json(createdUsuario);
+        } catch {
+            return res.status(500).json();
+        }
+    }
+
     static async login(req, res){
 
         const { cpf_cnpj } = req.params;
