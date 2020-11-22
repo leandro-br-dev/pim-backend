@@ -4,6 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/tarifas', TarifaController.findAll);
-    routes.get('tarifas/:id', TarifaController.findOne);
+    routes.get('/tarifas/:id', TarifaController.findOne);
 
 module.exports = routes;

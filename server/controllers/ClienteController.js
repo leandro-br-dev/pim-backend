@@ -16,7 +16,7 @@ class ClienteController{
         const { id } = req.params;         
 
         try {
-            const oneConta = await database.tb_conta.findOne( { 
+            const oneConta = await database.TB_CLIENTE.findOne( { 
                 where: 
                 { 
                     id: Number(id) 
