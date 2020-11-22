@@ -4,8 +4,8 @@ const { Router }           = require('express'),
 
 
     routes.get('/usuarios', UsuarioController.findAll);
-    routes.get('usuarios/:id', UsuarioController.findOne);
-    routes.post('/clientes', UsuarioController.create);   
+    routes.get('/usuarios/:id', UsuarioController.findOne);
+    routes.post('/usuarios', UsuarioController.create);   
     routes.put('/usuarios', UsuarioController.login);    
 
 module.exports = routes;
