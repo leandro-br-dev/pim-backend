@@ -4,6 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/investimentos', InvestimentoController.findAll);
-    routes.get('/investimentos/:cpf_cnpj', InvestimentoController.findOne);
+    routes.put('/investimentos/:cpf_cnpj', InvestimentoController.findOne);
 
 module.exports = routes;

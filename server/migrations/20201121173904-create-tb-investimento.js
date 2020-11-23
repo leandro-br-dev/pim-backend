@@ -18,7 +18,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       vl_investimento_inic: {
-        type: Sequelize.DATE
+        type: Sequelize.DOUBLE
       },
       vl_investimento_atual: {
         type: Sequelize.DOUBLE
