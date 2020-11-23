@@ -15,16 +15,14 @@ class InvestimentoController{
     
     static async findOne (req,res){
         const { cpf_cnpj } = req.params;
-        const { moeda } = req.body;             
-        console.log(cpf_cnpj);   
-        console.log(moeda);  
-
+        //const { moeda } = req.body;            
+      
         try {
             const oneConta = await database.tb_investimentos.findOne( { 
                 where: 
                 { 
                     cpf_cnpj: cpf_cnpj,
-                    id_moeda: moeda
+                   // id_moeda: moeda
                 } 
             } ); 
             return res.status(200).json(oneConta);
