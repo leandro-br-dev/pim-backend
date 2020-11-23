@@ -18,7 +18,7 @@ class InvestimentoController{
         //const { moeda } = req.body;            
       
         try {
-            const oneConta = await database.tb_investimentos.findOne( { 
+            const oneConta = await database.tb_investimentos.findAll( { 
                 where: 
                 { 
                     cpf_cnpj: cpf_cnpj,
