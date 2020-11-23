@@ -4,6 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/contas', ContaController.findAll);
-    routes.get('/contas/:id', ContaController.findOne);
+    routes.get('/contas/:cpf_cnpj', ContaController.findOne);
    
 module.exports = routes;

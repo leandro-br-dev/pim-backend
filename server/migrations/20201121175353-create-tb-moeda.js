@@ -2,7 +2,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('tb_moedas', {
-      id_moeda: {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,

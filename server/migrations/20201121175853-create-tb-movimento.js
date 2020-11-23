@@ -3,7 +3,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('tb_movimentos', {
 
-      id_movimento: {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,

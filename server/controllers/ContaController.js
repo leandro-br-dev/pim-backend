@@ -1,3 +1,4 @@
+const { text } = require("express");
 const database = require("../models");
 
 class ContaController{
@@ -13,20 +14,20 @@ class ContaController{
         
     }
     static async findOne (req,res){
-        const { id } = req.params;         
-
+        const { cpf_cnpj } = req.params;
+   
         try {
             const oneConta = await database.tb_conta.findOne( { 
                 where: 
                 { 
-                    id: Number(id) 
+                    cpf_cnpj: cpf_cnpj,
                 } 
             } ); 
             return res.status(200).json(oneConta);
         } catch {
             return res.status(500).json(error.message);
         }
-    }
+    } 
       
 }
 

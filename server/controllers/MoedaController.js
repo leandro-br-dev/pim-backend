@@ -17,7 +17,7 @@ class MoedaController{
         const { id } = req.params;         
 
        try{
-            const oneConta = await database.tb_conta.findOne( { 
+            const oneConta = await database.tb_moedas.findOne( { 
                 where: 
                 { 
                     id: Number(id) 

@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   tb_conta.init({
-    num_conta: DataTypes.INTEGER,
     cpf_cnpj: DataTypes.STRING,
     vl_disp_conta: DataTypes.DOUBLE,
     vl_bloq_conta: DataTypes.DOUBLE,
