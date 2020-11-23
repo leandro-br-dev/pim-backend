@@ -14,13 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   tb_investimentos.init({
-    num_conta: DataTypes.INTEGER,
+    cpf_cnpj: DataTypes.STRING,
     id_moeda: DataTypes.INTEGER,
-    dt_investimento: DataTypes.DATE,
-    qtd_moeda: DataTypes.DOUBLE,
-    vl_inic_investimento: DataTypes.DOUBLE,
-    dt_resgate: DataTypes.DATE,
-    vl_resg_investimento: DataTypes.DOUBLE
+    dt_investimento: DataTypes.STRING,
+    vl_investimento_inic: DataTypes.DOUBLE,
+    vl_investimento_atual: DataTypes.DOUBLE,
   }, {
     sequelize,
     modelName: 'tb_investimentos',

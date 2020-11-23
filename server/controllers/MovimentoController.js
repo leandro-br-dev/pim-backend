@@ -16,7 +16,7 @@ class MovimentoController{
         const { id } = req.params;         
 
        try{
-            const oneConta = await database.tb_conta.findOne( { 
+            const oneConta = await database.tb_movimentos.findOne( { 
                 where: 
                 { 
                     id: Number(id) 

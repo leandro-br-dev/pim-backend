@@ -16,7 +16,7 @@ class ContratoController{
     static async findOne (req,res){
         const { id } = req.params;  
         try {
-            const oneConta = await database.tb_conta.findOne( { 
+            const oneConta = await database.tb_contratos.findOne( { 
                 where: 
                 { 
                     id: Number(id) 

@@ -8,8 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      num_conta: {
-        type: Sequelize.INTEGER
+      cpf_cnpj: {
+        type: Sequelize.STRING
       },
       id_moeda: {
         type: Sequelize.INTEGER
@@ -17,16 +17,10 @@ module.exports = {
       dt_investimento: {
         type: Sequelize.DATE
       },
-      qtd_moeda: {
-        type: Sequelize.DOUBLE
-      },
-      vl_inic_investimento: {
-        type: Sequelize.DOUBLE
-      },
-      dt_resgate: {
+      vl_investimento_inic: {
         type: Sequelize.DATE
       },
-      vl_resg_investimento: {
+      vl_investimento_atual: {
         type: Sequelize.DOUBLE
       },
       createdAt: {
