@@ -14,12 +14,12 @@ class ContratoController{
     }
     
     static async findOne (req,res){
-        const { id } = req.params;  
+        const { num_conta } = req.params;  
         try {
-            const oneConta = await database.tb_contratos.findOne( { 
+            const oneConta = await database.tb_contratos.findAll( { 
                 where: 
                 { 
-                    id: Number(id) 
+                    num_conta: Number(num_conta) 
                 } 
             } ); 
             return res.status(200).json(oneConta);
