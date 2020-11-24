@@ -4,6 +4,6 @@ const { Router }        = require('express'),
 
 
     routes.get('/movimentos', MovimentoController.findAll);
-    routes.get('/movimentos/:id', MovimentoController.findOne);
+    routes.get('/movimentos/:num_conta', MovimentoController.findOne);
 
 module.exports = routes;

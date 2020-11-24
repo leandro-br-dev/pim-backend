@@ -21,6 +21,9 @@ module.exports = {
       dt_movim: {
         type: Sequelize.DATE
       },
+      confirma_efetivacao: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

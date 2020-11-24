@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     num_conta: DataTypes.INTEGER,
     tipo_movim: DataTypes.STRING,
     vl_lanc_movim: DataTypes.DOUBLE,
-    dt_movim: DataTypes.DATE
+    dt_movim: DataTypes.DATE,
+    confirma_efetivacao: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'tb_movimentos',
