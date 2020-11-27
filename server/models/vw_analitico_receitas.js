@@ -4,8 +4,7 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.INTEGER,
           primaryKey: true
       },
-      RECEITAS: DataTypes.DOUBLE,
-      tipo_movim: DataTypes.STRING,
+      financeiro: DataTypes.DOUBLE,     
       confirma_efetivacao: DataTypes.BOOLEAN        
       },
 
