@@ -10,49 +10,49 @@ module.exports = {
       },
       nome: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       cpf_cnpj: {
         type: Sequelize.STRING(14),
         allowNull: false,
-        unique: true,
+        unique: true
       },
       dataRef: {
         type: Sequelize.DATEONLY,
-        allowNull: true,
+        allowNull: true
       },
       endereco: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: true
       },
       bairro: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: true
       },    
       cidade: {
         type: Sequelize.STRING(45),
-        allowNull: true,
+        allowNull: true
       },
       estado: {
         type: Sequelize.STRING(2),
-        allowNull: true,
+        allowNull: true
       },
       cep: {
         type: Sequelize.STRING(8),
-        allowNull: true,
+        allowNull: true
       },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        unique: true
       },
       telefone: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: true
       },
       password: {
         type: Sequelize.STRING(10),
-        allowNull: true,
+        allowNull: true
       },
       perfil: {
         type: Sequelize.STRING,
@@ -61,7 +61,7 @@ module.exports = {
       },
       chave_acesso: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: true
       },
       ativo: {
         type: Sequelize.BOOLEAN,

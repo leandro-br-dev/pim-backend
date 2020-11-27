@@ -68,8 +68,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    ativo: DataTypes.BOOLEAN,
-    allowNull: true,
+    ativo: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }
   }, {
     sequelize,
     modelName: 'TB_CLIENTE',
