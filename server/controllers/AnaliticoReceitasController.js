@@ -1,6 +1,6 @@
 const database = require("../models");
 
-class InvestimentoController{
+class AnaliticoReceitasControler{
 
     static async findAll(req, res){
 
@@ -32,4 +32,4 @@ class InvestimentoController{
     }
 }
 
-module.exports = InvestimentoController
+module.exports = AnaliticoReceitasControler

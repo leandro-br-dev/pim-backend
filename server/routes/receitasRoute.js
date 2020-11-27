@@ -1,9 +1,9 @@
 const { Router }        = require('express'),
         routes          = Router(),
-        analiticoReceitasControler  = require('../controllers/analiticoreceitascontroler');       
+        AnaliticoReceitasController  = require('../controllers/AnaliticoReceitasController');       
 
 
-    routes.get('/receitas', analiticoReceitasControler.findAll);
-    routes.get('/receitas/:id_conta', analiticoReceitasControler.findOne);
+    routes.get('/receitas', AnaliticoReceitasController.findAll);
+    routes.get('/receitas/:id_conta', AnaliticoReceitasController.findOne);
    
 module.exports = routes;
