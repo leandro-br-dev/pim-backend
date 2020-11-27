@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     vl_lanc_fut_conta: DataTypes.DOUBLE,
     vl_tot_conta: DataTypes.DOUBLE,
     dt_aber_conta: DataTypes.DATEONLY,
-    ativo: DataTypes.BOOLEAN
+    ativo: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'tb_conta',

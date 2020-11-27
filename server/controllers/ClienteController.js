@@ -13,13 +13,13 @@ class ClienteController{
         
     }
     static async findOne (req,res){
-        const { id } = req.params;         
+        const { cpf_cnpj } = req.params;         
 
         try {
             const oneConta = await database.TB_CLIENTE.findOne( { 
                 where: 
                 { 
-                    id: Number(id) 
+                    cpf_cnpj: cpf_cnpj
                 } 
             } ); 
             return res.status(200).json(oneConta);

@@ -25,27 +25,27 @@ module.exports = (sequelize, DataTypes) => {
     },
     dataRef: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
+      allowNull: true,
     },
     endereco: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     bairro: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },    
     cidade: {
       type: DataTypes.STRING(45),
-      allowNull: false,
+      allowNull: true,
     },
     estado: {
       type: DataTypes.STRING(2),
-      allowNull: false,
+      allowNull: true,
     },
     cep: {
       type: DataTypes.STRING(8),
-      allowNull: false,
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -54,24 +54,22 @@ module.exports = (sequelize, DataTypes) => {
     },
     telefone: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     password: {
       type: DataTypes.STRING(10),
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
+      allowNull: true,
     },
     perfil: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     chave_acesso: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     ativo: DataTypes.BOOLEAN,
+    allowNull: true,
   }, {
     sequelize,
     modelName: 'TB_CLIENTE',

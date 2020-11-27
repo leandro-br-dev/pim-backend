@@ -19,27 +19,27 @@ module.exports = {
       },
       dataRef: {
         type: Sequelize.DATEONLY,
-        allowNull: false,
+        allowNull: true,
       },
       endereco: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       bairro: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },    
       cidade: {
         type: Sequelize.STRING(45),
-        allowNull: false,
+        allowNull: true,
       },
       estado: {
         type: Sequelize.STRING(2),
-        allowNull: false,
+        allowNull: true,
       },
       cep: {
         type: Sequelize.STRING(8),
-        allowNull: false,
+        allowNull: true,
       },
       email: {
         type: Sequelize.STRING,
@@ -48,11 +48,11 @@ module.exports = {
       },
       telefone: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       password: {
         type: Sequelize.STRING(10),
-        allowNull: false,
+        allowNull: true,
       },
       perfil: {
         type: Sequelize.STRING,
@@ -61,12 +61,11 @@ module.exports = {
       },
       chave_acesso: {
         type: Sequelize.STRING,
-        allowNull: false,
-        defaultValue: true
+        allowNull: true,
       },
       ativo: {
         type: Sequelize.BOOLEAN,
-        allowNull: false,
+        allowNull: true,
         defaultValue: true
       },
       createdAt: {
