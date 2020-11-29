@@ -17,8 +17,10 @@ const { Router } = require('express'),
         moedas = require('./moedasRoute'),
         tarifas = require('./tarifasRoute'),
         movimentos = require("./movimentosRoute"),
-        receitas = require("./receitasRoute")
-        estatisticaClientes = require("./estatisticaClientesRoute")
+        receitas = require("./receitasRoute"),
+        estatisticaClientes = require("./estatisticaClientesRoute"),
+        relatorios = require("./relatoriosRoute")
+
     
     routes.use(clientes); 
     routes.use(contas);
@@ -29,5 +31,6 @@ const { Router } = require('express'),
     routes.use(movimentos);
     routes.use(receitas);
     routes.use(estatisticaClientes);
+    routes.use(relatorios);
 
 module.exports = routes;

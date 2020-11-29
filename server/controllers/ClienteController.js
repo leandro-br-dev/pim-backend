@@ -12,6 +12,24 @@ class ClienteController{
         }
         
     }
+
+    
+
+    static async findAllAtivos(req, res){
+
+        try {
+            const allClientes = await database.TB_CLIENTE.findAll({ 
+                where: 
+                { 
+                    ativo: 1
+                } 
+            } ); 
+            return res.status(200).json(allClientes);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+        
+    }
     static async findOne (req,res){
         const { cpf_cnpj } = req.params;         
 
